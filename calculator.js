@@ -175,9 +175,9 @@ After completing all TODOs, test your calculator:
 
 */
 
-import { add, subtract, multiply divide } from "./utils/operations.js"
+import { add, subtract, multiply, divide } from "./utils/operations.js"
 import {parseNumbers, isValidOperation} from "./utils/parser.js"
-import _ from "lodash/seq.js";
+import "lodash/seq.js";
 
 const operation = process.argv[2];
 const numbers = process.argv.slice(3);
@@ -194,7 +194,21 @@ switch (operation) {
     case "add":
         result = add(nums);
         break;
-    // ... other cases
+
+    case "subtract":
+        result = subtract(nums);
+        break;
+
+    case "multiply":
+        result = multiply(nums);
+        break;
+
+    case "divide":
+        result = divide(nums);
+        break;
+
+    default:
+        break
 }
 
 console.log(`Result: ${result}`);

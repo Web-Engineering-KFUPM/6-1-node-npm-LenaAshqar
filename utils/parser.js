@@ -1,7 +1,8 @@
 import _ from "lodash";
 
 export function parseNumbers(input) {
-  return {/*write code here*/}
+    input = _.map(input, (str) => parseFloat(str))
+    return _.compact(input);
 }
 
 export function isValidOperation(operation) {
