@@ -22,7 +22,7 @@ export function divide(numbers) {
     let result = numbers[0]
     for (let i = 1 ; i < numbers.length ; i++) {
         if (numbers[i] === 0) {
-            return "Division by Sero error"
+            return "Division by Zero error"
         }
         else {
             result = result / numbers[i]
