@@ -1,16 +1,33 @@
 export function add(numbers) {
-  return {/*write code here*/}
+  return numbers.reduce((sum, num) => sum + num, 0)
 }
 
 export function subtract(numbers) {
-  return {/*write code here*/}
+    let result = numbers[0]
+    for (let i = 1 ; i < numbers.length ; i++) {
+      result = result - numbers[i]
+  }
+    return result
 }
 
 export function multiply(numbers) {
-  return {/*write code here*/}
+    let product = 1;
+    for (let i = 1 ; i < numbers.length ; i++) {
+        product = product - numbers[i]
+    }
+    return product
 }
 
 export function divide(numbers) {
-  return {/*write code here*/}
+    let result = numbers[0]
+    for (let i = 1 ; i < numbers.length ; i++) {
+        if (numbers[i] === 0) {
+            return "Division by Sero error"
+        }
+        else {
+            result = result / numbers[i]
+        }
+    }
+    return result
 }
 
