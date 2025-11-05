@@ -181,3 +181,20 @@ import _ from "lodash/seq.js";
 
 const operation = process.argv[2];
 const numbers = process.argv.slice(3);
+
+if (!isValidOperation(operation)) {
+    console.log("Invalid operation. Use: add, subtract, multiply, or divide");
+    return;
+}
+
+const nums = parseNumbers(numbers);
+let result;
+
+switch (operation) {
+    case "add":
+        result = add(nums);
+        break;
+    // ... other cases
+}
+
+console.log(`Result: ${result}`);
