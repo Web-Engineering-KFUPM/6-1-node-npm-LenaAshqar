@@ -12,8 +12,8 @@ export function subtract(numbers) {
 
 export function multiply(numbers) {
     let product = 1;
-    for (let i = 1 ; i < numbers.length ; i++) {
-        product = product - numbers[i]
+    for (let i = 0; i < numbers.length ; i++) {
+        product = product * numbers[i]
     }
     return product
 }

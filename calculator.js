@@ -184,31 +184,32 @@ const numbers = process.argv.slice(3);
 
 if (!isValidOperation(operation)) {
     console.log("Invalid operation. Use: add, subtract, multiply, or divide");
-    return;
 }
 
-const nums = parseNumbers(numbers);
-let result;
+else {
+    const nums = parseNumbers(numbers);
+    let result;
 
-switch (operation) {
-    case "add":
-        result = add(nums);
-        break;
+    switch (operation) {
+        case "add":
+            result = add(nums);
+            break;
 
-    case "subtract":
-        result = subtract(nums);
-        break;
+        case "subtract":
+            result = subtract(nums);
+            break;
 
-    case "multiply":
-        result = multiply(nums);
-        break;
+        case "multiply":
+            result = multiply(nums);
+            break;
 
-    case "divide":
-        result = divide(nums);
-        break;
+        case "divide":
+            result = divide(nums);
+            break;
 
-    default:
-        break
+        default:
+            break
+    }
+
+    console.log(`Result: ${result}`);
 }
-
-console.log(`Result: ${result}`);
